@@ -13,5 +13,7 @@ public class Game {
         System.out.println("Lütfen oyuna başlamak için bir karakter seçin...");
         player.selectChar();
 
+
+
     }
 }
