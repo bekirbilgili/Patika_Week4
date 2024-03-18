@@ -17,7 +17,7 @@ public class Player {
 
         GameChar[] charList = {new Samurai(), new Archer(), new Knight()};
         System.out.println("Karakterler: ");
-        System.out.println("-------------------------");
+        System.out.println("-----------------------------------------------------");
         for (GameChar gameChar : charList) {
             System.out.println("ID: " + gameChar.getId() +
                     "\t Karakter:" + gameChar.getName() +
@@ -25,7 +25,7 @@ public class Player {
                     "\t Sağlık:" + gameChar.getHealth() +
                     "\t Para:" + gameChar.getMoney());
         }
-        System.out.println("--------------------");
+        System.out.println("---------------------------------------------------");
         System.out.print("Lütfen bir karakter ID seçin: ");
         int selectChar = input.nextInt();
         switch (selectChar) {
@@ -48,6 +48,7 @@ public class Player {
                 ", Para: " + this.getMoney());
 
     }
+
 
     public void initPlayer(GameChar gameChar) {
         this.setDamage(gameChar.getDamage());
