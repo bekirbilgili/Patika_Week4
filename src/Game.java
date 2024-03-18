@@ -21,6 +21,9 @@ public class Game {
             System.out.println();
             System.out.println("1-Güvenli Ev--->Burası sizin için güvenli, burada düşman yoktur.");
             System.out.println("2-Mağaza--->Silah veya zırh alabilirsiniz");
+            System.out.println("3-Mağara-->Ödül Yemek, Dikkatli ol zombi çıkabilir");
+            System.out.println("4-Orman-->Ödül Odun, dikkatli ol vampir çıkabilir.");
+            System.out.println("5-Nehir-->Ödül Su,dikkatli ol ayı çıkabilir.");
             System.out.print("Lütfen gitmek istediğiniz bölgeyi seçin:");
             int selectLoc = input.nextInt();
             switch (selectLoc) {
@@ -30,12 +33,21 @@ public class Game {
                 case 2:
                     location = new ToolStore(player);
                     break;
+                case 3:
+                    location = new Cave(player);
+                    break;
+                case 4:
+                    location = new Forest(player);
+                    break;
+                case 5:
+                    location = new River(player);
+                    break;
                 default:
                     location = new SafeHouse(player);
 
             }
 
-            if(!location.onLocation()){
+            if (!location.onLocation()) {
                 System.out.println("GAME OVER!!");
                 break;
             }
